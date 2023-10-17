@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  background-color: hsl(233, 47%, 7%);
+  color: #fff;
+  overflow: hidden;
+}
+
+main {
+  width: 80%;
+  margin: 25px auto 0 auto;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+img {
+  width: 100%;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+.hero-container {
+  position: relative;
+}
+
+.hero-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: hsla(277, 100%, 28%, 0.5);
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.content-container {
+  text-align: center;
+  padding: 10%;
+  background-color: hsl(244, 38%, 16%);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.content-head {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.neat {
+  color: hsl(277, 100%, 28%);
+}
+.content-text {
+  color: hsla(0, 0%, 100%, 0.75);
+  margin-bottom: 30px;
+}
+.content-details {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.companies p {
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+.templates p {
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+.queries p {
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+/* CSS for Desktop View */
+@media (min-width: 576px) {
+  main {
+    flex-direction: row;
+    position: relative;
+    width: 60%;
+    max-width: 1000px;
+  }
+
+  .hero-container,
+  .content-container {
+    flex: 1;
+  }
+  .content-container {
+    position: absolute;
+    text-align: left;
+ 
+    padding: 53px;
+    right: 50%;
+    border-radius: 0;
+    
+  }
+  .hero-container {
+    position: absolute;
+    left: 50%;
+    height: 40%;
+  }
+  .hero-container::before {
+    border-radius: 0;
+  }
+  img {
+    height: 100%;
+    border-radius: 0;
+   
+  }
+  .content-details{
+    flex-direction: row;
+  }
+}
